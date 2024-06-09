@@ -1,0 +1,44 @@
+{
+  type: 'wappler_geoip_lite',
+  module: 'wappler-geoip-lite',
+  action: 'geoip',
+  groupTitle: 'GeoIP',
+  groupIcon: 'fas fa-lg fa-solid fa-globe',
+  title: 'GeoIP Lookup: @@var(actionName)@@',
+  icon: 'fas fa-lg fa-solid fa-globe',
+  dataScheme: [
+    { name: 'range', type: 'array' },
+    { name: 'country', type: 'string' },
+    { name: 'region', type: 'string' },
+    { name: 'eu', type: 'string' },
+    { name: 'timezone', type: 'string' },
+    { name: 'city', type: 'string' },
+    { name: 'll', type: 'array' },
+    { name: 'metro', type: 'number' },
+    { name: 'area', type: 'number' }
+  ],
+  dataPickObject: true,
+  properties: [
+    {
+      group: 'Options',
+      variables: [
+        { 
+          name: 'actionName', 
+          optionName: 'name', 
+          title: 'Name', 
+          type: 'text', 
+          required: true, 
+          defaultValue: 'GeoIP'
+        },
+        {
+          name: "ip",
+          optionName: "ip",
+          title: "IP Address",
+          type: "text",
+          required: true,
+          serverDataBindings: true
+        }
+      ]
+    }
+  ]
+}

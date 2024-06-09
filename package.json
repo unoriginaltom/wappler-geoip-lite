@@ -1,0 +1,13 @@
+{
+    "name": "@astrovia/wappler-geoip-lite",
+    "author": "astrovia",
+    "version": "1.0.0",
+    "description": "Implements GeoIP-lite to Wapplers Server Connect",
+    "license": "MIT",
+    "keywords": [
+        "wappler-extension"
+    ],
+    "dependencies": {
+        "geoip-lite": "^1.4.10"
+    }
+}
